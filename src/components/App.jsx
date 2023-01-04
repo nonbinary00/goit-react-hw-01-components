@@ -1,11 +1,14 @@
 import { Profile } from 'components/User/User';
+import { StatisticBox } from './StatisticBox/StatisticBox';
 
 import user from '../data/user.json'
+import Statistics from '../data/Statistics.json'
 
 export const App = () => {
   return (
     <div>
       <Profile user ={user}/>
+      <StatisticBox events = {Statistics} text ='Upload stats'/>
     </div>
   )
 }
