@@ -1,4 +1,5 @@
-import css from './StatisticBox.module.css';
+import css from './StatisticBox.module.css'
+import PropTypes from 'prop-types';
 // import StatCard from 'components/StatCard.js/StatCard.js'
 
 
@@ -28,3 +29,14 @@ export const StatisticBox= ({title ,stats}) => {
 </section>
 );
 };
+
+StatisticBox.propTypes = {
+    title: PropTypes.string,
+    stats: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.string.isRequired,
+        label: PropTypes.string.isRequired,
+        percentage: PropTypes.number.isRequired,
+      }).isRequired
+    ).isRequired,
+  };
