@@ -8,7 +8,8 @@ export const App = () => {
   return (
     <div>
       <Profile user ={user}/>
-      <StatisticBox events = {Statistics} text ='Upload stats'/>
+      <StatisticBox stats = {Statistics} title ='Upload stats'/>
+     
     </div>
   )
 }
